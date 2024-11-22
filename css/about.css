@@ -1,0 +1,35 @@
+/* Styles for About Page */
+body {
+  background-color: #fffbe7; /* Light yellow background */
+  font-family: Georgia, serif;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffedd5; /* Peach header background */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #cc5500; /* Brown link color */
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
