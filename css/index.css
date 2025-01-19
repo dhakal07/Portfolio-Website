@@ -1,117 +1,80 @@
-/* Keep the existing body and header styles intact */
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url('../assets/images/index.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
-  font-family: Arial;
-  color: #fff;
-}
-
+/* General header styling */
 header {
   text-align: center;
   padding: 20px;
 }
 
-/* Add navigation menu styles */
+/* Horizontal row for technologies */
+header .technologies {
+  display: flex;                /* Arrange items in a row */
+  justify-content: center;      /* Center items horizontally */
+  align-items: center;          /* Align items vertically */
+  overflow: hidden;             /* Hide overflowing text */
+  white-space: nowrap;          /* Prevent line wrapping */
+  margin-top: 20px;             /* Space above */
+}
+
+/* Moving text within technologies */
+header .technologies p {
+  display: inline-block;        /* Treat each <p> as a single line block */
+  margin: 0 20px;               /* Space between items */
+  font-size: 20px;              /* Set font size */
+  font-style: italic;           /* Italic text for style */
+  color: #cc5500;               /* Orange text color */
+  font-weight: bold;            /* Bold text */
+  animation: moveText 10s linear infinite; /* Continuous movement */
+}
+
+/* Animation keyframes for moving text */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%); /* Start outside right edge */
+  }
+  100% {
+    transform: translateX(-100%); /* End outside left edge */
+  }
+}
+
+/* Navigation menu styles */
 nav {
-  background-color: #333; /* Dark background for the navigation bar */
-  padding: 10px 0;
-}
-
-nav .nav-links {
-  list-style: none; /* Remove bullets from list */
-  display: flex; /* Display items horizontally */
-  justify-content: center; /* Center the navigation links */
-  margin: 0;
+  display: flex;
+  justify-content: center;
   padding: 0;
+  margin: 0;
 }
 
-nav .nav-links li {
-  margin: 0 15px; /* Horizontal space between links */
+nav ul {
+  list-style: none;             /* Remove bullets */
+  display: flex;                /* Horizontal arrangement */
+  padding: 0;
+  margin: 0;
 }
 
-nav .nav-links a {
-  text-decoration: none; /* Remove underline from links */
-  color: white; /* White text for links */
-  font-size: 18px; /* Font size for links */
-  font-weight: bold; /* Make links bold */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+nav ul li {
+  margin: 0 15px;               /* Space between items */
 }
 
-nav .nav-links a:hover {
-  color: #00aaff; /* Light blue color on hover */
+nav ul li a {
+  text-decoration: none;        /* Remove underline from links */
+  color: #cc5500;               /* Orange text color for links */
+  font-size: 18px;              /* Font size */
+  font-weight: bold;            /* Bold links */
+  transition: color 0.3s ease;  /* Smooth hover transition */
 }
 
-/* Existing name and class styles */
-.name {
-  font-size: 50px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000;
-  font-style: italic;
-}
-
-.AI {
-  font-style: italic;
-  font-size: 25px;
-  color: red;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.ML {
-  font-style: italic;
-  font-size: 25px;
-  color: green;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.CS {
-  font-style: italic;
-  font-size: 25px;
-  color: blue;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.CC {
-  font-style: italic;
-  font-size: 25px;
-  color: purple;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.WD {
-  font-style: italic;
-  font-size: 25px;
-  color: orange;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.work {
-  font-style: italic;
-  font-size: 25px;
-  color: red;
-  font-weight: bold;
-}
-
-.Ideas {
-  font-style: italic;
-  font-size: 25px;
-  color: red;
-  font-weight: bold;
+nav ul li a:hover {
+  color: #00aaff;               /* Light blue hover effect */
 }
 
 /* Footer styling */
 footer {
   text-align: center;
-  margin-top: 260px;
   font-size: 14px;
+  padding-top: 50px;            /* Add spacing above footer */
+}
+.Bio  {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 90%;
 }
